@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.1'
+        //tinker
+        classpath "com.tencent.tinker:tinker-patch-gradle-plugin:${TINKER_VERSION}"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url 'http://116.62.56.159:8081/nexus/content/repositories/snapshots/'
+        }
+        maven {
+            url 'http://116.62.56.159:8081/nexus/content/repositories/releases/'
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    compileSdk = 25
+    minSdk = 15
+    targetSdk = 25
+    support = "25.0.1"
+    buildTools = "25.0.2"
+    //home是否是作为模块，true的时候是，false的时候可以独立运行
+    bankMoudleDebug = true;
+    //module1是否是作为模块，true的时候是，false的时候可以独立运行
+    scanModule1Debug = true;
+}

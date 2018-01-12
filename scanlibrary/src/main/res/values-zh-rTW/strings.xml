@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="str_dealling">正在交易中，請稍候...</string>
+    <string name="prompt">提示</string>
+    <string name="pay_sucess_fail">是否已付款?</string>
+    <string name="scan_wx">微信掃碼</string>
+    <string name="scan_aplpy">支付寶掃碼</string>
+    <string name="no_pay">未知掃碼</string>
+    <string name="scan_refund_view">掃碼退款進行中</string>
+    <string name="scan_wx_view">微信掃碼支付中</string>
+    <string name="scan_query">正在查單中</string>
+    <string name="settle_exit">上次結算未完成%s,是否繼續結算</string>
+    <string name="asy_params">業務參數同步中</string>
+    <string name="scan_pay_alipy">支付寶掃碼支付中</string>
+    <string name="scan_pay_ing">掃碼支付中</string>
+    <string name="wx_code">微信条码</string>
+    <string name="increase_scan">正在生成收款二维码</string>
+    <string name="increase_settle_data">正在写入批结数据</string>
+</resources>

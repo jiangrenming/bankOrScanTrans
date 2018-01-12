@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dip"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置主密钥索引"
+            android:textColor="#232323"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="        设置主密钥索引:"
+            android:textColor="#232323"
+            android:textSize="12sp" />
+
+        <com.nld.cloudpos.payment.view.MEditText
+            android:id="@+id/miyuesuoyin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入范围0~5"
+            android:text="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置微信主密钥索引:"
+            android:textColor="#232323"
+            android:textSize="12sp" />
+
+        <com.nld.cloudpos.payment.view.MEditText
+            android:id="@+id/weixinmiyuesuoyin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入范围0~5"
+            android:text="0" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置密码键盘类型:"
+            android:textColor="#232323"
+            android:textSize="12sp" />
+
+        <RadioGroup
+            android:id="@+id/jianpanleixing"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/neizhimimajianpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="内置密码键盘"
+                android:textColor="#232323"
+                android:textSize="12sp" />
+
+            <RadioButton
+                android:id="@+id/waizhimimajianpan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="外置密码键盘"
+                android:textColor="#232323"
+                android:textSize="12sp" />
+        </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/save_info_but"
+            android:layout_width="317.33dp"
+            android:layout_height="46.67dp"
+            android:background="@drawable/blue_btn_bg"
+            android:text="保存"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</LinearLayout>

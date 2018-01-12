@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.nld.cloudpos.bankline"
+    android:versionCode="104"
+    android:versionName="1.0.4">
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- 1、设置打印机权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PRINTER" />
+    <!-- 2、访问密码键盘权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD" />
+    <!-- 3、密码键盘计算Pinblock权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_PIN_BLOCK" />
+    <!-- 4、密码键盘计算Mac权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_PIN_MAC" />
+    <!-- 5、密码键盘加密数据权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_ENCRYPT_DATA" />
+    <!-- 6、密码键盘更新终端主密钥权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_UPDATE_MKEY" />
+    <!-- 7、密码键盘更新工作密钥权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PINPAD_UPDATE_WKEY" />
+    <!-- 8、访问接触式IC卡读卡设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_ICCARD" />
+    <!-- 9、访问EMV权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_EMVL2" />
+    <!-- 10、访问非接触IC卡读卡设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_RFCARD" />
+    <!-- 11、访问磁条卡读卡器设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MAGCARD" />
+    <!-- 12、获取磁道明文接口权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MAGCARD_GETTRACKDATA" />
+    <!-- 13、获取磁道密文数据接口权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_MAGCARD_GETENCRYPTTRACKDATA" />
+    <!-- 14、访问PSAM卡设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_PSAMCARD" />
+    <!-- 15、访问串口设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SERIALPORT" />
+    <!-- 16、访问系统设备权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEMDEV" />
+    <!-- 17、设置系统时钟权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEMDEV_ALARM" />
+    <!-- 18、访问静默安装权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEMDEV_INSTALL" />
+    <!-- 19、更新终端OS、驱动权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SYSTEMDEV_OS_UPDATE" />
+    <!-- 20、ShellMonitor 权限 -->
+    <uses-permission android:name="android.permission.CLOUDPOS_SHELLMONITORDEV" />
+    <!-- 21、home键监听权限 -->
+    <uses-permission android:name="android.permission.LAKALA.ENABLE_HOME" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 屏保权限 -->
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <!-- 获取基站 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 接收开机广播 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- 获取网络状态权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 拉卡拉授权应用权限声明 -->
+    <uses-permission android:name="com.lakala.cloudpos.authorizor.DATA_ACCESS" />
+    <uses-permission android:name="com.lakala.cloudpos.permission.BANKLINE_READ" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <application
+        android:name="com.nld.cloudpos.MyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/WelcomeActivityTheme">
+        <activity
+            android:name="com.nld.cloudpos.payment.activity.WelcomeActivity"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!--<category android:name="android.intent.category.HOME"/>-->
+                <!--<category android:name="android.intent.category.DEFAULT"/>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- bankline add begin -->
+        <activity
+            android:name="com.nld.cloudpos.bankline.activity.LauncherActivity"
+            android:exported="true" />
+        <activity android:name="com.nld.cloudpos.bankline.activity.FragmentContainerActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.reprint.TranMenuActivity" />
+        <activity android:name="com.nld.cloudpos.bankline.activity.BillThirdActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <action android:name="com.yinma.payMoney" />
+                <data android:scheme="money" />
+            </intent-filter>
+        </activity>
+        <!-- bankline add end -->
+
+        <activity android:name="com.nld.cloudpos.payment.activity.SignSuccessActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.SettleMainActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.ConsumeSubmitActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.ConsumeResultActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.ConsumeGetpinActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.QuanCunZDGetPinActivivty" />
+        <activity android:name="com.nld.cloudpos.payment.activity.QuanCunZDMoneyActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.QuanCunZDSwipCardActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.QuanCunMenuActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.QuanCunFZDGetPinActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.QuanCunFZDMoneyActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.QuanCunFZDSwipeInActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.QuanCunFZDSwipeOutActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.OnLineSwipeCardActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.OnLineTransActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.InputCardValidityActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.preauth.PreAuthSubmitActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <action android:name="com.nld.cloudpos.payment.activity.PREAUTHSUBMITACTIVITY" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.nld.cloudpos.payment.activity.preauth.PreAuthResultActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.preauth.PreAuthGetpinActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.preauth.PreAuthCompleteSubmitActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.preauth.PreAuthCompleteInputAuthActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.preauth.PreAuthCancelSubmitActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.preauth.PreAuthCancelInputAuthActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.preauth.PreAuthComCancelCardNoConfirmActivty" />
+        <activity android:name="com.nld.cloudpos.payment.activity.preauth.PreAuthComCancelGetpinActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.preauth.PreAuthComCancelSubmitActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.preauth.SuperPasswordActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.TransErrorResultActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.PrintResultActivity" />
+        <activity
+            android:name="com.nld.cloudpos.payment.activity.TransStartActivity"
+            android:theme="@style/Translucent_whit" />
+        <activity
+            android:name="com.nld.cloudpos.payment.socket.NetWorkActivity"
+            android:theme="@style/Transparent" />
+        <!-- 微信扫码支付 -->
+        <activity android:name="com.nld.cloudpos.payment.activity.QueryBalance" />
+        <activity android:name="com.nld.cloudpos.payment.activity.QueryBalanceGetPin" />
+        <activity android:name="com.nld.cloudpos.payment.activity.BalanceResultActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.reprint.RePrintLastActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.reprint.RePrintLastMainActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.reprint.RePrintSettleMainActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.PrintTransActivity" />
+
+        <!-- 电子现金模块，新增 -->
+        <activity android:name="com.nld.cloudpos.ecash.activity.QuickPassInput" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.QuickPassCard" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.QuickPassPasswd" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.QuickPassResult" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.EcashConsumeInput" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.EcashConsumeCard" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.EcashConsumePasswd" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.EcashConsumeResult" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.AppointLoadCard" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.AppointLoadInput" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.AppointLoadPasswd" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.AppointLoadResult" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.NonAppointLoadCardOut" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.NonAppointLoadCardIn" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.NonAppointLoadInput" />
+        <activity android:name="com.nld.cloudpos.ecash.activity.NonAppointLoadPasswd" />
+        <activity
+            android:name="com.nld.cloudpos.ecash.activity.PbocWholeProcess"
+            android:theme="@style/Translucent_whit" />
+        <activity android:name="com.nld.cloudpos.payment.controller.QCImageActivity" />
+        <activity android:name="com.nld.cloudpos.payment.controller.ScanPayActivity" />
+        <activity android:name="com.nld.cloudpos.payment.controller.ScanRefundAuth" />
+        <activity android:name="com.nld.cloudpos.payment.controller.ScanQueryOrderActivity" />
+        <activity android:name="com.nld.cloudpos.payment.controller.ScanQueryResultActivity" />
+        <activity android:name="com.nld.cloudpos.payment.controller.AsyParamsActivity" />
+        <activity android:name="com.nld.cloudpos.payment.controller.QueryItemDetailsActivity" />
+        <activity android:name="com.nld.cloudpos.payment.activity.OffLineTransRefundActivity"/>
+        <activity android:name="com.nld.cloudpos.payment.controller.ScanErrorActivity"/>
+        <activity android:name="com.nld.cloudpos.payment.activity.preauth.PreAuthCompleteRefundActivity"/>
+        <activity android:name="com.nld.cloudpos.payment.activity.SettleResult"/>
+        <activity android:name="com.nld.cloudpos.payment.activity.Network"/>
+        <activity android:name="com.nld.cloudpos.payment.activity.ErrorResult"/>
+        <activity android:name="com.nld.cloudpos.payment.controller.PreCompleterSubmitActivity"/>
+    </application>
+
+</manifest>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/layout_app_settings_header"/>
+
+    <View
+        style="@style/divisive_line_height"
+        android:layout_width="match_parent"/>
+
+    <com.nld.cloudpos.bankline.view.CarouselView
+        android:id="@+id/cv_carousel"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        app:cv_bottomMargin="11dp"
+        app:cv_height="2dp"
+        app:cv_leftMargin="5dp"
+        app:cv_width="14dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="12dp"
+        android:orientation="vertical"
+        android:paddingLeft="22dp"
+        android:paddingRight="22dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="214dp"
+            android:background="@drawable/bill_third_bg"
+            android:orientation="vertical"
+            android:paddingLeft="17dp"
+            android:paddingRight="17dp">
+
+            <com.nld.cloudpos.bankline.view.BillItemView
+                android:id="@+id/biv_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                app:biv_contentSize="@dimen/bill_item_content_size"
+                app:biv_leftColor="@color/gray_999999"
+                app:biv_leftText="@string/bill_money"
+                app:biv_rightText="@string/cash_default"/>
+
+            <com.nld.cloudpos.bankline.view.BillItemView
+                android:id="@+id/biv_preferential"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:biv_contentSize="@dimen/bill_item_content_size"
+                app:biv_leftColor="@color/gray_999999"
+                app:biv_leftText="@string/bill_preferential"
+                app:biv_rightText="@string/cash_default"/>
+
+            <com.nld.cloudpos.bankline.view.BillItemView
+                android:id="@+id/biv_discount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:biv_contentSize="@dimen/bill_item_content_size"
+                app:biv_leftColor="@color/gray_999999"
+                app:biv_leftText="@string/bill_discount"
+                app:biv_rightText="@string/cash_default"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/shape_order"
+                android:layerType="software"/>
+
+            <com.nld.cloudpos.bankline.view.BillItemView
+                android:id="@+id/biv_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:biv_contentSize="22sp"
+                app:biv_leftText="@string/bill_account"
+                app:biv_rightColor="@color/orange_FF5C04"
+                app:biv_rightText="@string/cash_default"/>
+        </LinearLayout>
+
+        <TextView
+            style="@style/black_000000_15pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/bill_third_payType"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="12dp">
+
+            <TextView
+                android:id="@+id/tv_card"
+                style="@style/green_83C561_15pt"
+                android:layout_width="98dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_msg_bg"
+                android:gravity="center"
+                android:text="@string/bill_third_card"/>
+
+            <TextView
+                android:id="@+id/tv_weChat"
+                style="@style/green_83C561_15pt"
+                android:layout_width="98dp"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_msg_bg"
+                android:gravity="center"
+                android:text="@string/cash_we_chat"/>
+
+            <TextView
+                android:id="@+id/tv_aliPay"
+                style="@style/green_83C561_15pt"
+                android:layout_width="98dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/shape_msg_bg"
+                android:gravity="center"
+                android:text="@string/cash_ali_pay"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_payNow"
+            style="@style/white_FFFFFF_15pt"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/shape_bg_gradient"
+            android:text="@string/bill_payNow"/>
+    </LinearLayout>
+
+</LinearLayout>

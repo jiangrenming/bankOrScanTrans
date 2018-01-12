@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/trans_value_1"
+        style="@style/black_1E282C_13pt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1.1"
+        android:gravity="center"
+        android:text="@string/date"/>
+
+    <TextView
+        android:id="@+id/trans_value_2"
+        style="@style/black_1E282C_13pt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1.1"
+        android:gravity="center"
+        android:text="凭证号"/>
+
+    <TextView
+        android:id="@+id/trans_value_3"
+        style="@style/black_1E282C_13pt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/type"/>
+
+    <TextView
+        android:id="@+id/trans_value_4"
+        style="@style/black_1E282C_13pt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1.1"
+        android:gravity="center"
+        android:text="@string/money"/>
+
+    <TextView
+        android:id="@+id/trans_value_5"
+        style="@style/black_1E282C_13pt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="@string/state"/>
+
+</LinearLayout>

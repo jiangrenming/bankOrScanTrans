@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/bg_bill"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingRight="18dp">
+
+        <com.nld.cloudpos.bankline.view.BillItemView
+            android:id="@+id/biv_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:biv_contentSize="@dimen/bill_item_content_size"
+            app:biv_leftColor="@color/gray_8F8F8F"
+            app:biv_leftText="@string/bill_money"
+            app:biv_rightText="@string/cash_default"/>
+
+        <com.nld.cloudpos.bankline.view.BillItemView
+            android:id="@+id/biv_preferential"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:biv_contentSize="@dimen/bill_item_content_size"
+            app:biv_leftColor="@color/gray_8F8F8F"
+            app:biv_leftText="@string/bill_preferential"
+            app:biv_rightText="@string/cash_default"/>
+
+        <com.nld.cloudpos.bankline.view.BillItemView
+            android:id="@+id/biv_discount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:biv_contentSize="@dimen/bill_item_content_size"
+            app:biv_leftColor="@color/gray_8F8F8F"
+            app:biv_leftText="@string/bill_discount"
+            app:biv_rightText="@string/cash_default"/>
+
+        <com.nld.cloudpos.bankline.view.BillItemView
+            android:id="@+id/biv_volume"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:biv_contentSize="@dimen/bill_item_content_size"
+            app:biv_leftText="@string/bill_volume"
+            app:biv_rightText="@string/cash_default"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/shape_order"
+            android:layerType="software"/>
+
+        <com.nld.cloudpos.bankline.view.BillItemView
+            android:id="@+id/biv_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:biv_contentSize="12sp"
+            app:biv_leftText="@string/bill_account"
+            app:biv_rightColor="@color/orange_F56B00"
+            app:biv_rightText="@string/cash_default"/>
+    </LinearLayout>
+
+    <TextView
+        style="@style/black_000000_15pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/bill_payType"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/btn_payType"
+            style="@style/green_83C561_17pt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/selector_btn_minor"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="@string/bill_payScan"
+            android:textColor="@color/selector_font_minor"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="70dp"
+            android:src="@drawable/icon_listdown"/>
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            style="@style/black_000000_15pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/bill_vip"/>
+
+        <TextView
+            android:id="@+id/tv_more"
+            style="@style/blue_2193F3_15pt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/bill_more"/>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <Button
+            android:id="@+id/btn_recommend1"
+            style="@style/green_83C561_17pt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_minor"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="@string/bill_we_chat_pay_day"
+            android:textColor="@color/selector_font_minor"/>
+
+        <Button
+            android:id="@+id/btn_recommend2"
+            style="@style/green_83C561_17pt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_btn_minor"
+            android:gravity="center"
+            android:padding="13dp"
+            android:text="@string/bill_ali_pay_day"
+            android:textColor="@color/selector_font_minor"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_payNow"
+        style="@style/white_FFFFFF_17pt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/selector_btn_important"
+        android:gravity="center"
+        android:padding="13dp"
+        android:text="@string/bill_payNow"/>
+</LinearLayout>

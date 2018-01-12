@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <include layout="@layout/top_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="20dip" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#232323"
+            android:textSize="18sp"
+            android:text="手工输入主密钥" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="主密钥索引" />
+
+        <com.nld.cloudpos.payment.view.MEditText
+            android:id="@+id/zhumiyuesuoyin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入主密钥索引，范围在（0~6）" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入主密钥" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.nld.cloudpos.payment.view.MEditText
+                android:id="@+id/zhumiyuesuoyin_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入主密钥前12位(0~9、A~F)" />
+
+            <com.nld.cloudpos.payment.view.MEditText
+                android:id="@+id/zhumiyuesuoyin_last"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入主密钥后12位(0~9、A~F)" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="微信主密钥索引" />
+
+        <com.nld.cloudpos.payment.view.MEditText
+            android:id="@+id/weixinzhumiyuesuoyin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="输入主密钥索引，范围在（0~6）" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请输入微信主密钥" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <com.nld.cloudpos.payment.view.MEditText
+                android:id="@+id/weixinzhumiyuesuoyin_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入主密钥前12位(0~9、A~F)" />
+
+            <com.nld.cloudpos.payment.view.MEditText
+                android:id="@+id/weixinzhumiyuesuoyin_last"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="输入主密钥后12位(0~9、A~F)" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/save_info"
+            android:layout_width="317.33dp"
+            android:layout_height="46.67dp"
+            android:background="@drawable/blue_btn_bg"
+            android:text="保存"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</LinearLayout>

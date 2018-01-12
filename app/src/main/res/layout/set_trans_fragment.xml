@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_bg"
+              android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp20"
+        android:layout_weight="1"
+        android:fadeScrollbars="false"
+        android:scrollbars="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center_horizontal|center_horizontal"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/dp20"
+            android:paddingRight="@dimen/dp20">
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="默认收款方式"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/sp17"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_default_pay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <RadioButton
+                        android:id="@+id/rb_sale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="消费"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_preauth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="预授权"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是否使用免签免密"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/sp17"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_sale_void_pin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_sale_void_yes_pin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="是"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_sale_void_no_pin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="否"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="消费撤销是否用卡"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/sp17"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_sale_void_swipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_sale_void_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="是"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_sale_void_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="否"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp13"
+                android:paddingTop="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预授权完成是否用卡"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/sp17"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_auth_swipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_auth_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="是"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_auth_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="否"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp13"
+                android:paddingTop="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预授权完成撤销是否用卡"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/sp17"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_auth_void_swipe"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_auth_void_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="是"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_auth_void_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="否"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp13"
+                android:paddingTop="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="消费撤销是否输密"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/sp17"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_sale_cancel_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_cancel_input_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="是"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_cancel_input_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="否"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp13"
+                android:paddingTop="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预授权撤销是否输密"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/sp17"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_authvoid_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_authvoid_input_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="是"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_authvoid_input_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="否"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp13"
+                android:paddingTop="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预授权完成撤销是否输密"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/sp17"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_authsale_void_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_authsale_void_input_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="是"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_authsale_void_input_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="否"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp13"
+                android:paddingTop="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="预授权完成请求是否输密"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/sp17"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_authsale_input"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rb_authsale_input_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="是"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/rb_authsale_input_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="否"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp13"
+                android:paddingTop="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="超前冲正前15s是否交易查询"
+                    android:textColor="#ff000000"
+                    android:textSize="@dimen/sp17"/>
+
+                <RadioGroup
+                    android:id="@+id/rg_reserse"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rg_reserse_yes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="是"
+                        android:textColor="@color/black"/>
+
+                    <RadioButton
+                        android:id="@+id/rg_reserse_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp20"
+                        android:button="@drawable/btn_radio_type"
+                        android:paddingLeft="@dimen/dp20"
+                        android:text="否"
+                        android:textColor="@color/black"/>
+                </RadioGroup>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+    <Button
+        android:id="@+id/btn_save"
+        style="@style/but01_style"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_text_save_modify" />
+</LinearLayout>

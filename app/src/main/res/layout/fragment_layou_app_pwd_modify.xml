@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/layout_pwd_modify"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="@dimen/dp13"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/black_333333_16_center"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="@string/string_check_old_pwd" />
+
+            <EditText
+                android:id="@+id/et_current_pwd"
+                android:layout_width="0dp"
+                android:gravity="center_vertical|left"
+                android:layout_height="match_parent"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:background="@null"
+                android:singleLine="true"
+                android:textColor="#333"
+                android:textSize="@dimen/sp15"
+                android:layout_weight="1"
+                android:hint="@string/string_input_current_admin_pwd" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/bgColor_divier" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="@dimen/dp13"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/black_333333_16_center"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="@string/string_please_input_pwd" />
+
+            <EditText
+                android:id="@+id/et_new_pwd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical|left"
+                android:hint="@string/string_pwd_hint_text"
+                android:imeOptions="actionNext"
+                android:inputType="textPassword"
+                android:background="@null"
+                android:textColor="#333"
+                android:textSize="@dimen/sp15"
+                android:singleLine="true" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/bgColor_divier" />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:paddingLeft="@dimen/dp13"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/black_333333_16_center"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="@string/string_text_confirm_new_pwd" />
+
+            <EditText
+                android:id="@+id/et_new_pwd_confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:gravity="center_vertical|left"
+                android:singleLine="true"
+                android:background="@null"
+                android:textColor="#333"
+                android:textSize="@dimen/sp15"
+                android:layout_weight="1"
+                android:hint="@string/string_input_new_pwd_again" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/bgColor_divier" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_confirm"
+        style="@style/but01_style"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:layout_gravity="bottom"
+        android:text="@string/ok" />
+</RelativeLayout>

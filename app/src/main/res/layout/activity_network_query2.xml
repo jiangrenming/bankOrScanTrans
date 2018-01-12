@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white_F8F8F8"
+              android:orientation="vertical">
+
+    <include layout="@layout/layout_network_query_header2"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/gray_DEDEDE">
+
+        <com.nld.cloudpos.payment.view.MEditText
+            android:id="@+id/trans_query_search_et"
+            style="@style/black_1E282C_16pt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_query_msg_bg"
+            android:hint="  请输入序列号、流水号等"
+            android:inputType="number"
+            android:textColorHint="@color/gray_CCCCCC"/>
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/trans_query_search_et"
+            android:layout_centerVertical="true"
+            android:src="@drawable/icon_search"/>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

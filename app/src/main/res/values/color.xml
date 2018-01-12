@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="topbgcolor">#00B9F1</color>
+    <color name="tipcontentcolor">#0080C6</color>
+    <color name="ettextcolor">#222222</color>
+    <color name="tip_left_label_color">#666666</color>
+    <color name="red">#FF0000</color>
+    <color name="transparent_background">#50000000</color>
+    <color name="transparent_white">#99FFFFFF</color>
+    <color name="devideline_background">#c9c9c9</color>
+    <color name="confirmtipcolor">#16b0ee</color>
+    <color name="green_btn_bg">#ff84c562</color>
+    <color name="balck_333333">#333333</color>
+    <color name="black_505050">#505050</color>
+    <color name="gray_line">#e1e1e1</color>
+    <color name="blue_00b4f0">#00b4f0</color>
+    <color name="blue_0080c6">#0080c6</color>
+    <color name="blue_0180c6">#0180c6</color>
+    <color name="blue_00a1e2">#00a1e2</color>
+    <color name="blue_00aaee">#00aaee</color>
+    <color name="gray_text">#5c5c5c</color>
+    <color name="black_translucent">#55000000</color>
+
+    <color name="gray_737375">#737375</color>
+    <color name="gray_595959">#595959</color>
+    <color name="gray_dddddd">#dddddd</color>
+    <color name="gray_e5e5e5">#e5e5e5</color>
+    <color name="gray_d0d0d0">#d0d0d0</color>
+    <color name="gray_e8e8e8">#e8e8e8</color>
+    <color name="gray_cacaca">#cacaca</color>
+
+    <color name="red_ff2600">#ff2600</color>
+    <color name="blue_FF0C97FF">#FF0C97FF</color>
+
+    <!-- common -->
+    <color name="light_black">#ff333333</color>
+    <color name="light_white">#80ffffff</color>
+    <!--<color name="gray">#ff999999</color>-->
+    <color name="gray">#ef999999</color>
+    <!--<color name="bar_gray">#c8c8c8</color>-->
+    <color name="light_gray">#ffc1c2c2</color>
+    <color name="blue">#ff2274d2</color>
+    <color name="light_blue">#1e2274d2</color>
+    <color name="account_blue">#618be8</color>
+    <color name="transparent">@android:color/transparent</color>
+    <color name="gray_pool">#33000000</color>
+    <color name="gray_bg">#fff2f3f5</color>
+    <color name="select_white1">#ffeeeeee</color>
+    <color name="yellow">#ffff881f</color>
+    <color name="green">#ff34a350</color>
+    <color name="orange">#ffba8c4e</color>
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <!--窗口背景颜色-->
+    <color name="bgColor_alertview_alert">#f8f8f8</color>
+    <color name="bgColor_alertview_alert_start">#f0f0f0</color>
+    <!--标题颜色-->
+    <color name="textColor_alert_title">#000000</color>
+    <color name="textColor_actionsheet_title">#8f8f8f</color>
+    <!--消息颜色-->
+    <color name="textColor_alert_msg">#000000</color>
+    <color name="textColor_actionsheet_msg">#8f8f8f</color>
+    <!--线条颜色-->
+    <color name="bgColor_divier">#d7d7db</color>
+    <!--取消按钮颜色-->
+    <color name="textColor_alert_button_cancel">#007aff</color>
+    <!--高亮按钮颜色-->
+    <color name="textColor_alert_button_destructive">#ff3b30</color>
+    <!--普通按钮文字颜色-->
+    <color name="textColor_alert_button_others">#007aff</color>
+    <!--点击颜色-->
+    <color name="bgColor_alert_button_press">#eaeaea</color>
+    <!--actionsheet模式的取消按钮背景颜色-->
+    <color name="bgColor_actionsheet_cancel_nor">#ffffff</color>
+    <color name="swap_holo_green_bright">#48B94A</color>
+    <color name="swap_holo_bule_bright">#4996e5</color>
+    <color name="task_circle_color">#323a45</color>
+    <color name="task_ring_color">#14b9d6</color>
+
+    <!--POS UIkit-->
+    <color name="green_39DB76">#39DB76</color>
+    <color name="green_02C1D1">#02C1D1</color>
+    <color name="green_83C561">#83C561</color>
+    <color name="green_03BA91">#03BA91</color>
+    <color name="black_1E282C">#1E282C</color>
+    <color name="black_000000">#000000</color>
+    <color name="orange_FF7A04">#FF7A04</color>
+    <color name="orange_F56B00">#F56B00</color>
+    <color name="orange_FEE2DC">#FEE2DC</color>
+    <color name="orange_FF5C04">#FF5C04</color>
+    <color name="blue_2193F3">#2193F3</color>
+    <color name="red_FB5D5D">#FB5D5D</color>
+    <color name="cream_FB5D5D">#FFF7D5</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_8F8F8F">#8F8F8F</color>
+    <color name="gray_999999">#999999</color>
+    <color name="gray_CCCCCC">#CCCCCC</color>
+    <color name="gray_DEDEDE">#DEDEDE</color>
+    <color name="white_F8F8F8">#F8F8F8</color>
+    <color name="white_FFFFFF">#FFFFFF</color>
+
+    <color name="black_text_color">#1B1B1B</color>
+    <color name="dividing_line_color">#d7d7db</color>
+    <color name="main_blue">#00B7EE</color>
+    <color name="blue_4990E2">#4990E2</color>
+
+    <color name="bg_gray">#ebebeb</color>
+
+</resources>

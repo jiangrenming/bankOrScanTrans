@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/top_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="直联商户号："
+            android:textColor="#232323"
+            android:textSize="18sp" />
+
+        <com.nld.cloudpos.payment.view.MEditText
+            android:id="@+id/terminfo_merid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:singleLine="true"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:maxLength="15"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:text="直联终端号："
+            android:textColor="#232323"
+            android:textSize="18sp" />
+
+        <com.nld.cloudpos.payment.view.MEditText
+            android:id="@+id/terminfo_termid"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:singleLine="true"
+            android:inputType="number"
+            android:digits="1234567890"
+            android:maxLength="8"
+            android:textSize="18sp" />
+    </LinearLayout>
+<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/terminfo_confirm_bt"
+            android:layout_width="317.33dp"
+            android:layout_height="46.67dp"
+            android:background="@drawable/blue_btn_bg"
+            android:text="保存"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent_white">#99FFFFFF</color>
+    <color name="blue_00a1e2">#00a1e2</color>
+    <color name="green_39DB76">#39DB76</color>
+    <color name="white_F8F8F8">#F8F8F8</color>
+    <color name="gray_d0d0d0">#d0d0d0</color>
+    <color name="green_02C1D1">#02C1D1</color>
+    <color name="green_83C561">#83C561</color>
+    <color name="green_03BA91">#03BA91</color>
+    <color name="black_1E282C">#1E282C</color>
+    <color name="black_000000">#000000</color>
+    <color name="orange_FF7A04">#FF7A04</color>
+    <color name="orange_F56B00">#F56B00</color>
+    <color name="orange_FEE2DC">#FEE2DC</color>
+    <color name="orange_FF5C04">#FF5C04</color>
+    <color name="blue_2193F3">#2193F3</color>
+    <color name="red_FB5D5D">#FB5D5D</color>
+    <color name="cream_FB5D5D">#FFF7D5</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_8F8F8F">#8F8F8F</color>
+    <color name="gray_999999">#999999</color>
+    <color name="gray_CCCCCC">#CCCCCC</color>
+    <color name="gray_DEDEDE">#DEDEDE</color>
+    <color name="white_FFFFFF">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="transparent">@android:color/transparent</color>
+</resources>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/BankDirect.iml" filepath="$PROJECT_DIR$/BankDirect.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/banklibrary/banklibrary.iml" filepath="$PROJECT_DIR$/banklibrary/banklibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/netlibrary/netlibrary.iml" filepath="$PROJECT_DIR$/netlibrary/netlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scanlibrary/scanlibrary.iml" filepath="$PROJECT_DIR$/scanlibrary/scanlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thirdlibrary/thirdlibrary.iml" filepath="$PROJECT_DIR$/thirdlibrary/thirdlibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tinkerlibrary/tinkerlibrary.iml" filepath="$PROJECT_DIR$/tinkerlibrary/tinkerlibrary.iml" />
+    </modules>
+  </component>
+</project>

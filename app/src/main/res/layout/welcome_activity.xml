@@ -1,0 +1,72 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.nld.cloudpos.payment.activity.WelcomeActivity">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/welcome_logo" />
+    </LinearLayout>
+
+    <!-- 自助开通 -->
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="120dp"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/one_shot_open_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/one_shot_open_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zizhukaitong"
+            android:textColor="@color/white_blue_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <!-- 系统设置 -->
+
+    <LinearLayout
+        android:layout_width="260dp"
+        android:layout_height="42dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="25dip"
+        android:background="@drawable/one_shot_open_bg"
+        android:gravity="center"
+        android:onClick="sysSetting"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/one_shot_set_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/systemsetting"
+            android:textColor="@color/white_blue_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</LinearLayout>

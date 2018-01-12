@@ -1,0 +1,328 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="54dp"
+        android:background="@color/topbgcolor"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/top_open_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/pic_kaitongchenggong"/>
+
+        <TextView
+            android:id="@+id/top_open_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="标题"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/selfopen_failure"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="8dip"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dip"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dip"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- <ImageView
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:background="@drawable/err" /> -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dip"
+                        android:text="开通失败"
+                        android:textColor="#FF0000"
+                        android:textSize="25sp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="30dip"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/fail_msg"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="错误码:XXXX，请联系客服!"
+                        android:textSize="20sp"/>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_id_failok"
+                    android:layout_width="256dip"
+                    android:layout_height="50dip"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dip"
+                    android:background="@drawable/btn01_style"
+                    android:text="确定"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout style="@style/zizhukaitong_result_linearlayout">
+
+        <TextView
+            style="@style/zizhuakaitong_textview_style"
+            android:text="商户名称:"/>
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/text_id_mchntname"
+            style="@style/zizhuakaitong_textview_16_style"
+            android:text="一键测试商户"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/gray_d0d0d0"/>
+
+    <LinearLayout
+        style="@style/zizhukaitong_result_linearlayout"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/zizhuakaitong_textview_style"
+            android:text="商户地址:"/>
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/text_id_meraddr"
+            style="@style/zizhuakaitong_textview_16_style"
+            android:text="绿地中心22#"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/gray_d0d0d0"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        style="@style/zizhukaitong_result_linearlayout"
+        android:visibility="gone">
+
+        <TextView
+            style="@style/zizhuakaitong_textview_style"
+            android:text="电话:"/>
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/text_id_mertel"
+            style="@style/zizhuakaitong_textview_16_style"
+            android:text="01022223333"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/gray_d0d0d0"
+        android:visibility="gone"/>
+
+    <LinearLayout style="@style/zizhukaitong_result_linearlayout">
+
+        <TextView
+            style="@style/zizhuakaitong_textview_style"
+            android:text="商户号:"/>
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/text_id_merid"
+            style="@style/zizhuakaitong_textview_16_style"
+            android:text="123456789012345"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/gray_d0d0d0"/>
+
+    <LinearLayout style="@style/zizhukaitong_result_linearlayout">
+
+        <TextView
+            style="@style/zizhuakaitong_textview_style"
+            android:text="终端号:"/>
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/text_id_termid"
+            style="@style/zizhuakaitong_textview_16_style"
+            android:text="87654321"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/gray_d0d0d0"/>
+
+    <LinearLayout style="@style/zizhukaitong_result_linearlayout">
+
+        <TextView
+            style="@style/zizhuakaitong_textview_style"
+            android:text="微信终端号:"/>
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/text_id_termid_wx"
+            style="@style/zizhuakaitong_textview_16_style"
+            android:text="87654321"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/gray_d0d0d0"/>
+
+
+    <LinearLayout style="@style/zizhukaitong_result_linearlayout">
+
+        <TextView
+            style="@style/zizhuakaitong_textview_style"
+            android:text="设备SN号:"/>
+
+        <TextView
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/text_id_serialnum"
+            style="@style/zizhuakaitong_textview_16_style"
+            android:text="123413141342"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/gray_d0d0d0"/>
+
+    <LinearLayout style="@style/zizhukaitong_result_linearlayout">
+
+        <TextView
+            style="@style/zizhuakaitong_textview_style"
+            android:text="提示:"
+            android:textColor="@color/red"
+            android:textSize="16sp"/>
+
+        <TextView
+            style="@style/zizhuakaitong_textview_16_style"
+            android:text="请核对商户信息,确认无误后点击【确认】,如发现有误请联系拉卡拉客服"
+            android:textColor="@color/red"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dip"
+        android:layout_marginTop="10dip"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_id_reset"
+            style="@style/but01_style"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:background="@drawable/btn02_style"
+            android:onClick="reset"
+            android:text="@string/reset"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_id_confirm"
+            style="@style/but01_style"
+            android:layout_width="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dip"
+            android:layout_weight="1"
+            android:onClick="confirm"
+            android:text="@string/confirm"/>
+    </LinearLayout>
+
+</LinearLayout>

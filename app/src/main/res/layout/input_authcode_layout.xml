@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/gray_bg"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/top_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_height_91"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:singleLine="true"
+                    android:text="原交易日期"
+                    android:textColor="#333"
+                    android:textSize="@dimen/sp15"/>
+
+                <EditText
+                    android:id="@+id/et_old_date"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:hint="格式:mmdd(例如:1204)"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:singleLine="true"
+                    android:textColor="#333"
+                    android:textSize="@dimen/sp15"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/gray_bg"
+                android:contentDescription="@string/app_name"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_height_91"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp13">
+
+                <TextView
+                    android:id="@+id/auth_code"
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:singleLine="true"
+                    android:text="原授权号"
+                    android:textColor="#333"
+                    android:textSize="@dimen/sp15"/>
+
+                <EditText
+                    android:id="@+id/et_old_auth"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:textColor="#333"
+                    android:textSize="@dimen/sp15"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/gray_bg"
+                android:contentDescription="@string/app_name"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_height_91"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="@dimen/dp100"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:singleLine="true"
+                    android:text="金额"
+                    android:textColor="#333"
+                    android:textSize="@dimen/sp15"/>
+
+                <EditText
+                    android:id="@+id/et_amt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:inputType="numberDecimal"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:textColor="#333"
+                    android:textSize="@dimen/sp15"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/gray_bg"
+                android:contentDescription="@string/app_name"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+    <TextView
+        android:id="@+id/tv_authsale_enter"
+        style="@style/green_button"/>
+
+</LinearLayout>

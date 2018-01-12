@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/top_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp13"
+                android:paddingRight="@dimen/dp13" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:singleLine="true"
+                    android:text="交易订单号"
+                    android:textColor="#333"
+                    android:textSize="@dimen/sp15" />
+
+                <EditText
+                    android:id="@+id/et_querycode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/dp13"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:hint="请手动输入交易订单号"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:textColor="#333"
+                    android:textSize="@dimen/sp15" />
+
+                <ImageView
+                    android:id="@+id/img_scan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_scan" />
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/gray_line" />
+
+            <LinearLayout
+                android:id="@+id/ll_refund_amt"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_item_height_91"
+                android:orientation="horizontal"
+                android:paddingLeft="@dimen/dp13"
+                android:paddingRight="@dimen/dp13">
+
+                <TextView
+                    android:layout_width="@dimen/dp80"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:singleLine="true"
+                    android:text="@string/scan_refund"
+                    android:textColor="#333"
+                    android:textSize="@dimen/sp15"/>
+
+                <EditText
+                    android:id="@+id/et_refund_amt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp13"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:gravity="center_vertical|left"
+                    android:hint="@string/default_scan_amount"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    android:textColor="#333"
+                    android:textSize="@dimen/sp15"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_refund_amt_line"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp1"
+                android:background="@color/gray_line"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:id="@+id/tv_confirm"
+        style="@style/green_button"
+        android:text="确认"/>
+
+</LinearLayout>

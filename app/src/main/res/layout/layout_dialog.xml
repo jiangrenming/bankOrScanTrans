@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_alertview_alert"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvAlertTitle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/height_alert_title"
+        android:gravity="center"
+        android:text="@string/prompt"
+        android:textColor="@color/textColor_alert_title"
+        android:textSize="@dimen/textSize_alert_title" />
+
+    <TextView
+        android:id="@+id/tvAlertMsg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/marginBottom_alert_msg"
+        android:gravity="center"
+        android:textColor="@color/textColor_alert_msg"
+        android:textSize="@dimen/textSize_alert_msg" />
+
+    <LinearLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_alertview_alert"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_divier"
+            android:background="@color/bgColor_divier" />
+
+        <TextView
+            android:id="@+id/tvAlert"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_alert_button"
+            android:gravity="center"
+            android:text="@string/ok"
+            android:textColor="@color/textColor_alert_button_others"
+            android:textSize="@dimen/textSize_alert_button" />
+    </LinearLayout>
+
+</LinearLayout>

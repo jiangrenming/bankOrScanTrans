@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="144dp"
+        android:paddingLeft="21dp"
+        android:paddingRight="21dp">
+
+        <TextView
+            android:id="@+id/cal_edit"
+            style="@style/orange_F56B00_17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="11dp"
+            android:ellipsize="start"
+            android:singleLine="true"
+            android:text=""
+            android:textCursorDrawable="@drawable/cosume_input_white"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/orange_F56B00_20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cash_symbol_equal"/>
+
+            <TextView
+                android:id="@+id/cal_edit_result"
+                style="@style/orange_F56B00_28"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="start"
+                android:gravity="right"
+                android:singleLine="true"
+                android:text="@string/cash_default"
+                android:textCursorDrawable="@drawable/cosume_input_white"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.nld.cloudpos.bankline.view.NumberKeyMainBoard
+        android:id="@+id/keyBoard_num"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

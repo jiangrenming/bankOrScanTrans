@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_gray"
+              android:gravity="center_horizontal"
+              android:orientation="vertical" >
+
+    <include layout="@layout/top_title"/>
+
+    <TextView
+        style="@style/black_000000_21pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:drawableLeft="@drawable/pic_jiesuanchenggong"
+        android:drawablePadding="15dp"
+        android:gravity="center_vertical"
+        android:text="@string/cash_success"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="271dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="40dip"
+        android:background="@drawable/circle_white_with_white_stroke"
+        >
+
+        <TextView
+            android:id="@+id/tips"
+            style="@style/gray_20_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:text="@string/cash_sign"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="125dp"
+            android:background="@drawable/bg_signa_pen"/>
+
+        <Button
+            android:id="@+id/wipe"
+            style="@style/white_F8F8F8_21pt"
+            android:layout_width="250dip"
+            android:layout_height="50dip"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="@dimen/common_margin"
+            android:background="@drawable/circle_red_with_red_stroke"
+            android:text="@string/cash_wipe"/>
+
+        <com.nld.cloudpos.payment.view.LinePathView
+            android:id="@+id/sign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/wipe"
+            android:layout_below="@+id/tips"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/submit"
+        style="@style/white_20_center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="30dip"
+        android:background="@drawable/selector_btn_important"
+        android:text="@string/submit"/>
+</LinearLayout>

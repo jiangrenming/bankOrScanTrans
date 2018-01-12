@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/white"
+              android:gravity="center_horizontal"
+              android:orientation="vertical">
+
+    <include layout="@layout/top_title"/>
+
+    <TextView
+        android:id="@+id/input_auth_code"
+        style="@style/black_505050_14_center"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="@string/qing_shuru_shouquan_ma"/>
+
+    <com.nld.cloudpos.payment.view.MEditText
+        android:id="@+id/et_auth_code"
+        style="@style/blue_00a1e2_33_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:background="@color/transparent"
+        android:digits="0123456789"
+        android:hint=" "
+        android:inputType="numberDecimal"
+        android:maxLength="15"
+        android:textCursorDrawable="@drawable/input_money_cursor"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal">
+
+        <com.nld.cloudpos.payment.view.NumberKeyBoard
+            android:id="@+id/input_authcode_keyboard"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"/>
+    </LinearLayout>
+
+</LinearLayout>

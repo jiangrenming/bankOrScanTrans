@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="white_F8F8F8_17pt">
+        <item name="android:textColor">@color/white_F8F8F8</item>
+        <item name="android:textSize">19sp</item>
+    </style>
+</resources>

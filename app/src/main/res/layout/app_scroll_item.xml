@@ -1,0 +1,21 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <com.nld.cloudpos.payment.view.MyImgScroll
+        android:id="@+id/app_info_list"
+        android:layout_width="fill_parent"
+        android:layout_height="450dip" >
+    </com.nld.cloudpos.payment.view.MyImgScroll>
+
+    <LinearLayout
+        android:id="@+id/app_info_dot_indicator"
+        android:layout_width="fill_parent"
+        android:layout_height="20dip"
+        android:gravity="center"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+</LinearLayout>

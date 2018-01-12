@@ -1,0 +1,149 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_F8F8F8"
+    android:orientation="vertical">
+
+    <com.nld.cloudpos.bankline.view.CalculatorView
+        android:id="@+id/cv_calculator"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="77dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/shape_bg_gradient"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_brush"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_cash_tab_bg">
+
+            <ImageView
+                android:id="@+id/iv_brush"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_cash_brush_iv"/>
+
+            <TextView
+                android:id="@+id/tv_brush"
+                style="@style/cash_tab_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_brush"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="@string/cash_brush"/>
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/gray_DEDEDE"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_weChat"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_cash_tab_bg">
+
+            <ImageView
+                android:id="@+id/iv_weChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_cash_we_chat_iv"/>
+
+            <TextView
+                android:id="@+id/tv_weChat"
+                style="@style/cash_tab_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_weChat"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="@string/cash_we_chat"/>
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/gray_DEDEDE"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_aliPay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/selector_cash_tab_bg">
+
+            <ImageView
+                android:id="@+id/iv_aliPay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="14dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/selector_cash_ali_pay_iv"/>
+
+            <TextView
+                android:id="@+id/tv_aliPay"
+                style="@style/cash_tab_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_aliPay"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="4dp"
+                android:text="@string/cash_ali_pay"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <View
+        style="@style/divisive_line_height"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:scaleType="centerInside"
+            android:src="@drawable/shouyin_pic_youhuizixun"/>
+
+        <View
+            style="@style/divisive_line_width"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/shouyin_pic_yinlian"
+            android:gravity="center_vertical"
+            android:text="@string/youhui_msg"
+            android:textColor="@color/black_1E282C"/>
+    </LinearLayout>
+</LinearLayout>

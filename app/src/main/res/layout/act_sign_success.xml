@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include  layout="@layout/top_title" />
+        
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginTop="50dp"
+         android:gravity="center_horizontal"
+         android:layout_gravity="center_horizontal"
+         android:orientation="vertical" >
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/pic_jiesuanchenggong" />
+         <TextView
+             android:id="@+id/sign_title"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:text="签到成功"
+             android:textColor="@color/balck_333333"
+             android:textSize="20sp" />
+     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dip"
+        android:gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/sign_success__msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请继续以下操作"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dip"
+        android:gravity="center_horizontal" >
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#5c5c5c"
+            android:textSize="@dimen/sp15" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/sign_success_print"
+        android:layout_width="256dip"
+        android:layout_height="50dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dip"
+        android:textColor="@color/white"
+        android:text="打印明细"
+        android:visibility="invisible"
+        android:background="@drawable/btn01_style" />
+    <Button
+        android:id="@+id/sign_success_confirm"
+        android:layout_width="256dip"
+        android:layout_height="50dip"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dip"
+        android:textColor="@color/white"
+        android:text="确定"
+        android:background="@drawable/btn01_style" />
+
+</LinearLayout>

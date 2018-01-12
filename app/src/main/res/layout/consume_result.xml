@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/white"
+              android:orientation="vertical"
+    >
+
+    <include layout="@layout/top_title"/>
+
+    <!-- 提示信息 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dip"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/print_result_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_print_success"/>
+
+        <TextView
+            android:id="@+id/print_result_tv"
+            style="@style/tipcontentcolor"
+            android:layout_marginTop="5dip"
+            android:text="@string/jiaoyichenggong"/>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/zizhukaitong_result_linearlayout"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dip">
+
+        <TextView
+            android:id="@+id/print_reason_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在打印凭条\n请妥善保管您的发票凭证"
+            android:textColor="@color/black"
+            android:textSize="24sp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/print_getcard_tip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:text="请取走卡片"
+        android:textColor="@color/red_ff2600"
+        android:textSize="16sp"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/print_second_btn"
+        style="@style/but01_style"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="20dip"
+        android:onClick="printSecondTip"
+        android:text="@string/print_second"/>
+
+    <Button
+        style="@style/but01_style"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="20dip"
+        android:onClick="confirm"
+        android:text="@string/confirm"/>
+
+</LinearLayout>

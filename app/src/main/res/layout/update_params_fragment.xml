@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <include layout="@layout/top_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:drawablePadding="@dimen/dp10"
+                android:drawableTop="@drawable/icon_tongbuchenggong"
+                android:gravity="center"
+                android:paddingBottom="@dimen/dp27"
+                android:paddingTop="@dimen/dp17"
+                android:text="@string/params_sync_success"
+                android:textColor="@color/balck_333333"
+                android:textSize="@dimen/sp18"/>
+            <TextView
+                android:id="@+id/update_param_storeName"
+                style="@style/updateParamHintStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp21"
+                android:layout_marginTop="@dimen/dp21"
+                android:text="@string/store_short_name"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp12"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/dp18">
+
+                <TextView
+                    style="@style/updateParamTypeStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp17"
+                    android:text="@string/scan_type"/>
+
+                <View style="@style/horizontalLine"/>
+
+                <LinearLayout
+                    style="@style/updateParaItemStyle"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/update_param_scanphone_alipay_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/yewukaitong_icon_chenggong"/>
+
+                    <TextView
+                        style="@style/updateParamItemContentStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="支付宝 - 商户主扫"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/updateParaItemStyle"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/update_param_scanpos_alipay_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/yewukaitong_icon_chenggong"/>
+
+                    <TextView
+                        style="@style/updateParamItemContentStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="支付宝 - 顾户主扫"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/updateParaItemStyle"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/update_param_scanphone_weixin_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/yewukaitong_icon_chenggong"/>
+
+                    <TextView
+                        style="@style/updateParamItemContentStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="微信支付 - 商户主扫"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/updateParaItemStyle"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/update_param_scanpos_weixin_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/yewukaitong_icon_chenggong"/>
+
+                    <TextView
+                        style="@style/updateParamItemContentStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="微信支付 - 顾户主扫"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/updateParaItemStyle"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/update_param_scanrefund_img"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/yewukaitong_icon_chenggong"/>
+
+                    <TextView
+                        style="@style/updateParamItemContentStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="扫码退货"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_update_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp33"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/greenbutton"
+        android:gravity="center"
+        android:text="@string/finish"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp17"/>
+
+</LinearLayout>

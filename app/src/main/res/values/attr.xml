@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="gridPasswordView">
+        <attr name="textColor" format="color|reference" />
+        <attr name="textSize" format="dimension" />
+        <attr name="lineColor" format="color" />
+        <attr name="gridColor" format="color" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="passwordLength" format="integer" />
+        <attr name="passwordTransformation" format="string" />
+        <attr name="passwordType" format="enum">
+            <enum name="numberPassword" value="0" />
+            <enum name="textPassword" value="1" />
+            <enum name="textVisiblePassword" value="2" />
+            <enum name="textWebPassword" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="RadioGroupItemView_Style">
+        <attr name="desc" format="string" />
+        <attr name="selects" format="string" />
+        <attr name="select_values" format="string" />
+        <attr name="default_sel_val" format="string" />
+        <attr name="orientation" format="enum">
+            <enum name="h" value="0" />
+            <enum name="v" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="BillItemView">
+        <attr name="biv_contentSize" format="dimension" />
+        <attr name="biv_leftSize" format="dimension" />
+        <attr name="biv_rightSize" format="dimension" />
+        <attr name="biv_leftColor" format="color" />
+        <attr name="biv_rightColor" format="color" />
+        <attr name="biv_leftText" format="string" />
+        <attr name="biv_rightText" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="TypeItemView">
+        <attr name="tiv_content" format="string" />
+        <attr name="tiv_showArrow" format="boolean" />
+        <attr name="tiv_leftDrawable" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CarouselView">
+        <attr name="cv_width" format="dimension"/>
+        <attr name="cv_height" format="dimension"/>
+        <attr name="cv_leftMargin" format="dimension"/>
+        <attr name="cv_bottomMargin" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="EditTextFocus_Style">
+        <attr name="select_bg" format="integer" />
+        <attr name="default_bg" format="integer" />
+    </declare-styleable>
+</resources>

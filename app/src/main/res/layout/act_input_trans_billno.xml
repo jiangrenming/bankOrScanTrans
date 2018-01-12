@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <include layout="@layout/top_title" />
+    
+    <TextView
+        android:id="@+id/trans_billno_tip"
+        style="@style/black_505050_14_center"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dip"
+        android:layout_height="wrap_content"
+        android:text="请输入原交易参考号" />
+
+    
+    <com.nld.cloudpos.payment.view.MEditText
+        android:id="@+id/trans_billno_edit"
+        style="@style/blue_00a1e2_17_left_center"
+        android:layout_marginTop="10dip"
+        android:inputType="numberDecimal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:digits="1234567890"
+        android:textCursorDrawable="@drawable/input_money_cursor"
+        android:background="@color/transparent"
+        android:maxLength="12" />
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/gray_d0d0d0"/>
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+    <com.nld.cloudpos.payment.view.NumberKeyBoard
+        android:id="@+id/trans_billno_key_board"
+        android:layout_width="fill_parent"
+        android:layout_height="195dp"
+        android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+
+</LinearLayout>

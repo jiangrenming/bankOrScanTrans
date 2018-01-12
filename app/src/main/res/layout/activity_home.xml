@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_F8F8F8">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp">
+
+        <TextView
+            style="@style/white_FFFFFF_17pt"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:text="@string/home_title"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="155dp">
+
+            <com.nld.cloudpos.bankline.view.CarouselView
+                android:id="@+id/cv_carousel"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cv_bottomMargin="11dp"
+                app:cv_height="2dp"
+                app:cv_leftMargin="5dp"
+                app:cv_width="14dp"/>
+
+            <TextView
+                android:id="@+id/tv_subTitle"
+                style="@style/black_1E282C_13pt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/orange_FEE2DC"
+                android:ellipsize="marquee"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:padding="7dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="@string/home_sub_title"/>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/iv_collection"
+            android:layout_width="match_parent"
+            android:layout_height="155dp"
+            android:layout_marginTop="7dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/shoukuan"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="7dp">
+
+            <ImageView
+                android:id="@+id/iv_helpCenter"
+                android:layout_width="165dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/bangzhuzhongxin"/>
+
+            <ImageView
+                android:id="@+id/iv_steward"
+                android:layout_width="165dp"
+                android:layout_height="150dp"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/pos_guanjia"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</FrameLayout>

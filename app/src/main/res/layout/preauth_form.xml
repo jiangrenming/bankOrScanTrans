@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+     >
+
+    <include layout="@layout/top_title" />
+
+    <TextView
+        style="@style/tipcontentcolor"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="10dip"
+        android:text="@string/qing_shuru_jin_e" />
+
+    <com.nld.cloudpos.payment.view.MEditText
+        android:id="@+id/et_jine"
+        style="@style/et_tyle"
+        android:layout_marginTop="10dip"
+        android:hint="@string/qing_shuru_jin_e"
+        android:inputType="numberDecimal"
+        android:textSize="32sp"
+        android:maxLength="10" />
+
+    <Button
+        style="@style/but01_style"
+        android:layout_marginTop="10dip"
+        android:onClick="confirm"
+        android:text="@string/confirm" />
+
+</LinearLayout>

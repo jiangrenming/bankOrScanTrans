@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <include layout="@layout/top_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/bg_login" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_gravity="center"
+                android:layout_marginBottom="39dp"
+                android:layout_marginTop="61dp"
+                android:src="@drawable/shanghuzhongduanbangding_pic_logo"
+                android:layout_height="52dp"
+                android:layout_width="126dp" />
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="22dp"
+                android:orientation="vertical"
+                android:layout_width="237dp">
+
+                <LinearLayout
+                    android:id="@+id/linlayout_account_id"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/shape_edit_bg"
+                    android:orientation="horizontal"
+                    android:layout_height="39dp">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6.5dp"
+                        android:src="@drawable/loding_icon_zhanghao" />
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4.5dp"
+                        android:background="@color/gray_e5e5e5" />
+
+                    <com.nld.cloudpos.payment.util.ListenerKeyBackEditText
+                        android:id="@+id/account_id"
+                        style="@style/black_1E282C_11pt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10.5dp"
+                        android:background="@null"
+                        android:hint="@string/account_admin_id_tip"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linlayout_account_psd"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="11dp"
+                    android:background="@drawable/shape_edit_bg"
+                    android:orientation="horizontal"
+                    android:layout_height="39dp">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="6.5dp"
+                        android:src="@drawable/loding_icon_mima" />
+
+                    <TextView
+                        android:layout_width="1px"
+                        android:layout_height="17dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="4.5dp"
+                        android:background="@color/gray_e5e5e5" />
+
+                    <com.nld.cloudpos.payment.util.ListenerKeyBackEditText
+                        android:id="@+id/account_psd"
+                        style="@style/black_1E282C_11pt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10.5dp"
+                        android:background="@null"
+                        android:hint="@string/account_admin_psd_tip"
+                        android:inputType="textPassword"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/account_get"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/account_howget"
+                    android:textColor="@color/blue_4990E2"
+                    android:textSize="12dp" />
+
+                <Button
+                    android:id="@+id/account_login"
+                    style="@style/white_F8F8F8_13pt"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="22dp"
+                    android:background="@drawable/selector_btn_radius30"
+                    android:text="@string/account_login"
+                    android:layout_height="34dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

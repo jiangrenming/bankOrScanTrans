@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/top_title" />
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="账户余额"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="@dimen/pub_text_size_large"
+        android:textColor="@color/black"/>
+    
+    
+    <TextView 
+        android:id="@+id/money"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="3dp"
+        android:text="32434"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:textSize="50dp"
+        android:textColor="@color/blue_00aaee"/>
+    
+    <Button
+        android:id="@+id/confirm_btn"
+        style="@style/but01_style"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="20dip"
+        android:onClick="confirm"
+        android:text="@string/confirm" />
+
+</LinearLayout>

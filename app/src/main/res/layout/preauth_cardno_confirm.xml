@@ -1,0 +1,126 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+     >
+
+    <include layout="@layout/top_title" />
+
+    <!-- 提示信息 -->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dip"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/icon_jiaoyixinxi" />
+
+        <TextView
+            style="@style/tipcontentcolor"
+            android:layout_marginTop="5dip"
+            android:text="@string/heduijiaoyixinxi" />
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/zizhukaitong_result_linearlayout"
+        android:orientation="vertical"
+        android:padding="3dip" >
+
+        <LinearLayout
+            style="@style/zizhukaitong_result_linearlayout"
+            android:layout_margin="0dip"
+            android:background="@null"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip" >
+
+            <TextView
+                style="@style/zizhuakaitong_textview_style"
+                android:text="交易类型"
+                android:textColor="@color/tip_left_label_color"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                style="@style/zizhuakaitong_textview_style"
+                android:text="消费"
+                android:textColor="@color/ettextcolor"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <include layout="@layout/devide_line" />
+
+        <LinearLayout
+            style="@style/zizhukaitong_result_linearlayout"
+            android:layout_margin="0dip"
+            android:background="@null"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip" >
+
+            <TextView
+                style="@style/zizhuakaitong_textview_style"
+                android:text="卡号"
+                android:textColor="@color/tip_left_label_color"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_cardno"
+                style="@style/zizhuakaitong_textview_style"
+                android:text="6225 8860 0340 2169"
+                android:textColor="@color/ettextcolor"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <include layout="@layout/devide_line" />
+
+        <LinearLayout
+            style="@style/zizhukaitong_result_linearlayout"
+            android:layout_margin="0dip"
+            android:background="@null"
+            android:paddingBottom="10dip"
+            android:paddingTop="10dip" >
+
+            <TextView
+                style="@style/zizhuakaitong_textview_style"
+                android:text="金额"
+                android:textColor="@color/tip_left_label_color"
+                android:textSize="24sp" />
+
+            <TextView
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_money"
+                style="@style/zizhuakaitong_textview_style"
+                android:text="460.50"
+                android:textColor="@color/ettextcolor"
+                android:textSize="24sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        style="@style/but01_style"
+        android:layout_width="fill_parent"
+        android:layout_marginLeft="20dip"
+        android:layout_marginTop="20dip"
+        android:onClick="confirm"
+        android:text="@string/confirm" />
+
+</LinearLayout>

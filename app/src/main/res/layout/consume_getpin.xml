@@ -1,0 +1,214 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/top_title"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_bill"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/get_pin_money_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style="@style/black_505050_14_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="交易金额"/>
+
+            <TextView
+                android:id="@+id/paymoney"
+                style="@style/black_333333_18_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="￥456.44"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/get_pin_carno_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                style="@style/black_505050_14_center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="交易卡号"/>
+
+            <TextView
+                android:id="@+id/paycardno"
+                style="@style/black_333333_18_left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:text="1111111111"/>
+        </RelativeLayout>
+
+        <com.nld.cloudpos.bankline.view.BillItemView
+            android:id="@+id/biv_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:biv_contentSize="8sp"
+            app:biv_leftText="发卡行："
+            app:biv_rightText="常熟农村商业银行"/>
+
+        <TextView
+            android:id="@+id/tv_union_right1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="2017年2月2日至2月10日期间刷卡消费可享受8.5折优惠"
+            android:textColor="@color/white"
+            android:visibility="visible"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_order"
+            android:layerType="software"/>
+
+        <com.nld.cloudpos.bankline.view.BillItemView
+            android:id="@+id/biv_account"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:biv_leftSize="18sp"
+            app:biv_leftText="实付款："
+            app:biv_rightColor="@color/orange_FF7A04"
+            app:biv_rightSize="22sp"
+            app:biv_rightText="￥ 9989.99"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:background="@drawable/bg_rectangle_corner_stroke_gray"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="xx银行"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="2.1~2.15期间刷卡消费可享受8.5折优惠"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="实付金额"/>
+
+            <TextView
+                android:id="@+id/actual_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/textview0"
+                android:paddingRight="10dp"
+                android:text="86.00"
+                android:textColor="#fc3f61"
+                android:textSize="30sp"/>
+
+            <TextView
+                android:id="@+id/textview0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="元"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        style="@style/blue_00a1e2_15_left_center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dip"
+        android:layout_marginTop="15dip"
+        android:text="请输入密码，无密码直接点确定"
+        android:visibility="gone"/>
+
+    <com.nld.cloudpos.payment.view.gridpwdview.GridPasswordView
+        android:id="@+id/gpv_normal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginLeft="23dip"
+        android:layout_marginRight="23dip"
+        android:layout_marginTop="15dp"
+        android:visibility="gone">
+
+        <requestFocus/>
+    </com.nld.cloudpos.payment.view.gridpwdview.GridPasswordView>
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="16dp"
+        android:background="#DeDEDE"
+        android:paddingBottom="5dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/tv_pwd_input"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_rectangle_corner_white"
+            android:gravity="center_vertical"
+            android:hint="请输入交易密码，无密码直接按确认键"
+            android:onClick="getPinPad"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/get_pin_confirm_btn"
+        style="@style/but01_style"
+        android:layout_marginTop="10dip"
+        android:onClick="confirm"
+        android:text="@string/nextstep"
+        android:visibility="gone"/>
+
+</LinearLayout>

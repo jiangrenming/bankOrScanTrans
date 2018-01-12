@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+     >
+
+    <include layout="@layout/top_title" />
+
+    <TextView
+        style="@style/black_505050_14_center"
+        android:layout_width="wrap_content"
+        android:layout_marginLeft="20dip"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dip"
+        android:layout_height="wrap_content"
+        android:text="@string/qing_shuru_ji_huo_ma" />
+
+    
+    <com.nld.cloudpos.payment.view.MEditText
+        android:id="@+id/et_jihuoma"
+        style="@style/blue_00a1e2_17_left_center"
+        android:layout_marginTop="10dip"
+        android:inputType="number"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textCursorDrawable="@drawable/input_money_cursor"
+        android:background="@color/transparent"
+        android:maxLength="12" />
+    <ImageView 
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/gray_d0d0d0"/>
+    <Button
+        style="@style/but01_style"
+        android:layout_marginTop="25dip"
+        android:onClick="confirm"
+        android:text="@string/confirm" />
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1" >
+    <com.nld.cloudpos.payment.view.NumberKeyBoard
+        android:id="@+id/zizhukaitong_key_board"
+        android:layout_width="fill_parent"
+        android:layout_height="195dp"
+        android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+</LinearLayout>

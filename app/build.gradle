@@ -1,0 +1,97 @@
+apply plugin: 'com.android.application'
+apply from: 'jenkins-build.gradle'
+
+android {
+    compileSdkVersion rootProject.ext.compileSdk
+    buildToolsVersion rootProject.ext.buildTools
+    defaultConfig {
+        applicationId "com.nld.cloudpos.bankline"
+        minSdkVersion rootProject.ext.minSdk
+        targetSdkVersion rootProject.ext.targetSdk
+        versionCode 104
+        versionName "1.0.4"
+        //在BuildConfig里面创建BUILD_TIME变量，代表apk编译时间
+        buildConfigField "String", "BUILD_TIME", "\"${buildTime()}\""
+    }
+
+    //签名
+    signingConfigs {
+        myConfig {
+            //使用签名文件,根目录下newland_app.keystore
+            storeFile file("nldappprod.keystore")
+            storePassword "newland8888"
+            keyAlias "nldappprod.keystore"
+            keyPassword "newland8888"
+        }
+    }
+    buildTypes {
+        release {
+            //对齐
+            zipAlignEnabled true
+            buildConfigField "String", "POST_URL", "${REAL_IP}"
+            signingConfig signingConfigs.myConfig
+            //混淆开关
+            minifyEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            debuggable true
+            buildConfigField "String", "POST_URL", "${SIT_IP}"
+            signingConfig signingConfigs.myConfig
+            minifyEnabled true
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        envtest {
+            zipAlignEnabled false
+            buildConfigField "String", "POST_URL", "${SIT_IP}"
+            signingConfig signingConfigs.myConfig
+            //混淆开关
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        envprod {
+            buildConfigField "String", "POST_URL", "${REAL_IP}"
+            zipAlignEnabled false
+            signingConfig signingConfigs.myConfig
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    dexOptions {
+        jumboMode = true
+    }
+    lintOptions {
+        abortOnError false
+    }
+    android {
+        useLibrary 'org.apache.http.legacy'
+    }
+}
+//创建当前时间字符创 比如 0411_1213 表示 4月11号，12点13分
+def buildTime() {
+    def date = new Date()
+    def formattedDate = date.format('YY-MM-dd HH:mm')
+    return formattedDate
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/core-3.1.0.jar')
+    compile 'com.newland.framework:zbarlib:1.0.3-SNAPSHOT'
+    compile 'com.newland.framework:litepal:1.0.1-SNAPSHOT'
+    compile 'com.newland.pos:pullrefresh:1.0.6'
+    compile project(':banklibrary')
+    compile project(':netlibrary')
+    compile project(':scanlibrary')
+    compile project(':tinkerlibrary')
+    //可选，用于生成application类
+    provided("com.tencent.tinker:tinker-android-anno:${TINKER_VERSION}") { changing = true }
+}
+apply from: 'tinker_build.gradle'

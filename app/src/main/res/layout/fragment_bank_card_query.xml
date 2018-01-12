@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_FFFFFF"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@color/gray_DEDEDE">
+
+        <com.nld.cloudpos.payment.view.MEditText
+            android:id="@+id/trans_query_search_et"
+            style="@style/black_1E282C_16pt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_query_msg_bg"
+            android:hint="@string/please_enter_the_certificate_number"
+            android:inputType="number"
+            android:paddingEnd="50dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="50dp"
+            android:paddingStart="10dp"
+            android:textColorHint="@color/gray_CCCCCC"/>
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/trans_query_search_et"
+            android:layout_alignRight="@id/trans_query_search_et"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/icon_search"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/layout_local_bank_card_query_header"/>
+
+    <View
+        android:id="@+id/item_trans_bottom_line"
+        style="@style/divisive_line_height"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"/>
+
+    <ListView
+        android:id="@+id/trans_query_listview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null">
+    </ListView>
+
+</LinearLayout>

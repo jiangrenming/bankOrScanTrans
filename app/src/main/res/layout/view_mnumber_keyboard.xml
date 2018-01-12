@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="horizontal">
+
+    <ImageView
+        style="@style/divisive_line_width"
+        android:layout_height="fill_parent"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_1"
+            style="@style/black_selector_num_center"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_1"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_4"
+            style="@style/black_selector_num_center"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_4"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_7"
+            style="@style/black_selector_num_center"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_7" />
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_dot"
+            style="@style/black_selector_num_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_dot"/>
+
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+    </LinearLayout>
+
+    <ImageView
+        style="@style/divisive_line_width"
+        android:layout_height="fill_parent"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_2"
+            style="@style/black_selector_num_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_2"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_5"
+            style="@style/black_selector_num_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_5"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_8"
+            style="@style/black_selector_num_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_8"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_0"
+            style="@style/black_selector_num_center"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_0"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+    </LinearLayout>
+
+    <ImageView
+        style="@style/divisive_line_width"
+        android:layout_height="fill_parent"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_3"
+            style="@style/black_selector_num_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_3"/>
+
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_6"
+            style="@style/black_selector_num_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_6"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_9"
+            style="@style/black_selector_num_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_9"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_multiply"
+            style="@style/black_selector_clean_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_mutiply"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+    </LinearLayout>
+
+    <ImageView
+        style="@style/divisive_line_width"
+        android:layout_height="fill_parent"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <ImageView
+            android:id="@+id/keyboard_bt_backspace"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:scaleType="centerInside"
+            android:src="@drawable/shouyin_icon_delete"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_add"
+            style="@style/black_selector_num_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_plus"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_minus"
+            style="@style/black_selector_num_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/calculator_minus"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+
+        <TextView
+            android:id="@+id/keyboard_bt_equal"
+            style="@style/black_selector_num_center"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/selector_bg_white_green"
+            android:text="@string/cash_symbol_equal"/>
+
+        <ImageView
+            style="@style/divisive_line_height"
+            android:layout_width="fill_parent"/>
+    </LinearLayout>
+
+    <ImageView
+        style="@style/divisive_line_width"
+        android:layout_height="fill_parent"/>
+</LinearLayout>

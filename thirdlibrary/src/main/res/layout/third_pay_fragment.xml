@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/gray_bg"
+              android:orientation="vertical">
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp130"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp3"
+        android:paddingRight="@dimen/dp3">
+
+        <com.newland.caishen.ui.view.DotViewPager
+            android:id="@+id/dot_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/dp20"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:layout_marginTop="@dimen/dp10"
+        android:layout_weight="1"
+        android:background="@drawable/bg_bill"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_vip_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收款商户:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"></TextView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_merchant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="大盘鸡"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_order_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单金额:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"></TextView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_order_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥0.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_dicount_amt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="其他优惠:"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"></TextView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_dicount_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥0.00"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_18"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp1"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp30"
+            android:background="@drawable/bill_dividing_line"
+            android:orientation="horizontal"></LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_actual_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginRight="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp30"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="实际应收："
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_22"></TextView>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_actual_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥0.00"
+                android:textColor="@color/red_text2"
+                android:textSize="@dimen/sp_22"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:text="收款方式："
+        android:textColor="@color/black"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:layout_marginBottom="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:gravity="center_horizontal|center_horizontal"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/txt_bank"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp44"
+            android:layout_weight="1"
+            android:background="@drawable/page_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:text="银行卡"/>
+
+        <View
+            android:id="@+id/txt_gap_left"
+            android:layout_width="@dimen/dp12"
+            android:layout_height="match_parent"/>
+
+        <RadioButton
+            android:id="@+id/txt_alipay"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp44"
+            android:layout_weight="1"
+            android:background="@drawable/page_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:text="支付宝"/>
+
+        <View
+            android:id="@+id/txt_gap_right"
+            android:layout_width="@dimen/dp12"
+            android:layout_height="match_parent"/>
+
+        <RadioButton
+            android:id="@+id/txt_weichat"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/dp44"
+            android:layout_weight="1"
+            android:background="@drawable/page_radio"
+            android:button="@null"
+            android:gravity="center"
+            android:text="微信" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/txt_pay"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp44"
+        android:layout_marginBottom="@dimen/dp15"
+        android:layout_marginLeft="@dimen/dp20"
+        android:layout_marginRight="@dimen/dp20"
+        android:background="@drawable/icon_nav_bg"
+        android:gravity="center"
+        android:text="立即收款"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

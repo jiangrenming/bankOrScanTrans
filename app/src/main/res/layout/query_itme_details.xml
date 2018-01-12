@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <include layout="@layout/top_title"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp13"
+                    android:paddingRight="@dimen/dp13" >
+
+                    <TextView
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical|left"
+                        android:singleLine="true"
+                        android:text="交易类型 :"
+                        android:textColor="#333"
+                        android:textSize="@dimen/sp15" />
+
+                    <TextView
+                        android:id="@+id/transChannel"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_text"
+                        android:textSize="@dimen/sp15" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/gray_bg"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setting_item_height_91"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp13"
+                    android:paddingRight="@dimen/dp13" >
+
+                    <TextView
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical|left"
+                        android:singleLine="true"
+                        android:text="交易状态 :"
+                        android:textColor="#333"
+                        android:textSize="@dimen/sp15" />
+
+                    <TextView
+                        android:id="@+id/transState"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_text"
+                        android:textSize="@dimen/sp15" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/gray_bg"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setting_item_height_91"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp13"
+                    android:paddingRight="@dimen/dp13" >
+
+                    <TextView
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical|left"
+                        android:singleLine="true"
+                        android:text="交易金额 :"
+                        android:textColor="#333"
+                        android:textSize="@dimen/sp15" />
+
+                    <TextView
+                        android:id="@+id/trans_money"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/sp15" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/gray_bg"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setting_item_height_91"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp13"
+                    android:paddingRight="@dimen/dp13" >
+
+                    <TextView
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical|left"
+                        android:singleLine="true"
+                        android:text="交易时间 :"
+                        android:textColor="#333"
+                        android:textSize="@dimen/sp15" />
+
+                    <TextView
+                        android:id="@+id/trans_time"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_text"
+                        android:textSize="@dimen/sp15" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/gray_bg"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setting_item_height_91"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp13"
+                    android:paddingRight="@dimen/dp13" >
+
+                    <TextView
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical|left"
+                        android:singleLine="true"
+                        android:text="订单号 :"
+                        android:textColor="#333"
+                        android:textSize="@dimen/sp15" />
+
+                    <TextView
+                        android:id="@+id/trans_order"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_text"
+                        android:textSize="@dimen/sp15" />
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/gray_bg"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/setting_item_height_91"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/dp13"
+                    android:paddingRight="@dimen/dp13" >
+
+                    <TextView
+                        android:layout_width="@dimen/dp100"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="center_vertical|left"
+                        android:singleLine="true"
+                        android:text="操作员 :"
+                        android:textColor="#333"
+                        android:textSize="@dimen/sp15" />
+
+                    <TextView
+                        android:id="@+id/trans_user"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:singleLine="true"
+                        android:textColor="@color/gray_text"
+                        android:textSize="@dimen/sp15" />
+                </LinearLayout>
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/dp1"
+                    android:background="@color/gray_bg"
+                    android:contentDescription="@string/app_name" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/trans_printer"
+            style="@style/green_button"
+            android:layout_marginBottom="10dp"
+            android:text="打印" />
+        <TextView
+            android:id="@+id/trans_finish"
+            style="@style/green_button"
+            android:text="返回" />
+    </LinearLayout>
+</RelativeLayout>

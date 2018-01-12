@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white_F8F8F8"
+    android:orientation="vertical">
+
+    <com.nld.cloudpos.bankline.view.TypeItemView
+        android:id="@+id/tiv_cardExpense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_feature_item_bg_style"
+        app:tiv_content="银行卡消费"
+        app:tiv_leftDrawable="@drawable/icon_bankcardpay"/>
+
+    <com.nld.cloudpos.bankline.view.TypeItemView
+        android:id="@+id/tiv_cardpreAuthorization"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_feature_item_bg_style"
+        app:tiv_content="银行卡预授权"
+        app:tiv_leftDrawable="@drawable/icon_ysq_pay"/>
+
+    <com.nld.cloudpos.bankline.view.TypeItemView
+        android:id="@+id/tiv_scanWeChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_feature_item_bg_style"
+        app:tiv_content="微信支付"
+        app:tiv_leftDrawable="@drawable/icon_wechat"/>
+
+    <com.nld.cloudpos.bankline.view.TypeItemView
+        android:id="@+id/tiv_scanAliPay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_feature_item_bg_style"
+        app:tiv_content="支付宝"
+        app:tiv_leftDrawable="@drawable/icon_alipay"/>
+
+    <com.nld.cloudpos.bankline.view.TypeItemView
+        android:id="@+id/tiv_cash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/menu_feature_item_bg_style"
+        app:tiv_content="现金"
+        app:tiv_leftDrawable="@drawable/icon_cash"/>
+
+</LinearLayout>
